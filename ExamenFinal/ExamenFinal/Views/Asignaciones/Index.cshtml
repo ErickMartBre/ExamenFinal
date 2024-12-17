@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ExamenFinal.Asignaciones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Asignaciones</h2>
+<p>¡Recuerda usar las fechas en formato YYYY-MM-DD!</p>
+
+<p>
+    @Html.ActionLink("Crear nueva asignación", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAsignacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Colaboradores.PrimerNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proyectos.NombreProyecto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaAsignacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Colaboradores.PrimerNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proyectos.NombreProyecto)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { Carnet = item.Carnet, CodigoProyecto = item.CodigoProyecto }) |
+            @Html.ActionLink("Detalles", "Details", new { Carnet = item.Carnet, CodigoProyecto = item.CodigoProyecto }) |
+            @Html.ActionLink("Borrar", "Delete", new { Carnet = item.Carnet, CodigoProyecto = item.CodigoProyecto })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model ExamenFinal.Asignaciones
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Asignaciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAsignacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAsignacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colaboradores.PrimerNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colaboradores.PrimerNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proyectos.NombreProyecto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proyectos.NombreProyecto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

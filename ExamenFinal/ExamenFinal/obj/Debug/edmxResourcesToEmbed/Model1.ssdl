@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ConstructoraUHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Asignaciones">
+    <Key>
+      <PropertyRef Name="Carnet" />
+      <PropertyRef Name="CodigoProyecto" />
+    </Key>
+    <Property Name="Carnet" Type="int" Nullable="false" />
+    <Property Name="CodigoProyecto" Type="int" Nullable="false" />
+    <Property Name="FechaAsignacion" Type="date" />
+  </EntityType>
+  <EntityType Name="Colaboradores">
+    <Key>
+      <PropertyRef Name="Carnet" />
+    </Key>
+    <Property Name="Carnet" Type="int" Nullable="false" />
+    <Property Name="PrimerNombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SegundoNombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrimerApellido" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SegundoApellido" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="date" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Salario" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Categoria" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Proyectos">
+    <Key>
+      <PropertyRef Name="CodigoProyecto" />
+    </Key>
+    <Property Name="CodigoProyecto" Type="int" Nullable="false" />
+    <Property Name="NombreProyecto" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FechaInicio" Type="date" />
+    <Property Name="FechaFin" Type="date" />
+  </EntityType>
+  <Association Name="FK__Asignacio__Carne__5165187F">
+    <End Role="Colaboradores" Type="Self.Colaboradores" Multiplicity="1" />
+    <End Role="Asignaciones" Type="Self.Asignaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colaboradores">
+        <PropertyRef Name="Carnet" />
+      </Principal>
+      <Dependent Role="Asignaciones">
+        <PropertyRef Name="Carnet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asignacio__Codig__52593CB8">
+    <End Role="Proyectos" Type="Self.Proyectos" Multiplicity="1" />
+    <End Role="Asignaciones" Type="Self.Asignaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proyectos">
+        <PropertyRef Name="CodigoProyecto" />
+      </Principal>
+      <Dependent Role="Asignaciones">
+        <PropertyRef Name="CodigoProyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ConstructoraUHModelStoreContainer">
+    <EntitySet Name="Asignaciones" EntityType="Self.Asignaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Colaboradores" EntityType="Self.Colaboradores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proyectos" EntityType="Self.Proyectos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Asignacio__Carne__5165187F" Association="Self.FK__Asignacio__Carne__5165187F">
+      <End Role="Colaboradores" EntitySet="Colaboradores" />
+      <End Role="Asignaciones" EntitySet="Asignaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asignacio__Codig__52593CB8" Association="Self.FK__Asignacio__Codig__52593CB8">
+      <End Role="Proyectos" EntitySet="Proyectos" />
+      <End Role="Asignaciones" EntitySet="Asignaciones" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ConstructoraUHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Asignaciones">
+          <Key>
+            <PropertyRef Name="Carnet" />
+            <PropertyRef Name="CodigoProyecto" />
+          </Key>
+          <Property Name="Carnet" Type="int" Nullable="false" />
+          <Property Name="CodigoProyecto" Type="int" Nullable="false" />
+          <Property Name="FechaAsignacion" Type="date" />
+        </EntityType>
+        <EntityType Name="Colaboradores">
+          <Key>
+            <PropertyRef Name="Carnet" />
+          </Key>
+          <Property Name="Carnet" Type="int" Nullable="false" />
+          <Property Name="PrimerNombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoNombre" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrimerApellido" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoApellido" Type="nvarchar" MaxLength="50" />
+          <Property Name="FechaNacimiento" Type="date" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Salario" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Categoria" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Proyectos">
+          <Key>
+            <PropertyRef Name="CodigoProyecto" />
+          </Key>
+          <Property Name="CodigoProyecto" Type="int" Nullable="false" />
+          <Property Name="NombreProyecto" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="FechaInicio" Type="date" />
+          <Property Name="FechaFin" Type="date" />
+        </EntityType>
+        <Association Name="FK__Asignacio__Carne__5165187F">
+          <End Role="Colaboradores" Type="Self.Colaboradores" Multiplicity="1" />
+          <End Role="Asignaciones" Type="Self.Asignaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Colaboradores">
+              <PropertyRef Name="Carnet" />
+            </Principal>
+            <Dependent Role="Asignaciones">
+              <PropertyRef Name="Carnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Asignacio__Codig__52593CB8">
+          <End Role="Proyectos" Type="Self.Proyectos" Multiplicity="1" />
+          <End Role="Asignaciones" Type="Self.Asignaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proyectos">
+              <PropertyRef Name="CodigoProyecto" />
+            </Principal>
+            <Dependent Role="Asignaciones">
+              <PropertyRef Name="CodigoProyecto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ConstructoraUHModelStoreContainer">
+          <EntitySet Name="Asignaciones" EntityType="Self.Asignaciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Colaboradores" EntityType="Self.Colaboradores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proyectos" EntityType="Self.Proyectos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Asignacio__Carne__5165187F" Association="Self.FK__Asignacio__Carne__5165187F">
+            <End Role="Colaboradores" EntitySet="Colaboradores" />
+            <End Role="Asignaciones" EntitySet="Asignaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Asignacio__Codig__52593CB8" Association="Self.FK__Asignacio__Codig__52593CB8">
+            <End Role="Proyectos" EntitySet="Proyectos" />
+            <End Role="Asignaciones" EntitySet="Asignaciones" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ConstructoraUHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Asignaciones">
+          <Key>
+            <PropertyRef Name="Carnet" />
+            <PropertyRef Name="CodigoProyecto" />
+          </Key>
+          <Property Name="Carnet" Type="Int32" Nullable="false" />
+          <Property Name="CodigoProyecto" Type="Int32" Nullable="false" />
+          <Property Name="FechaAsignacion" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Colaboradores" Relationship="Self.FK__Asignacio__Carne__5165187F" FromRole="Asignaciones" ToRole="Colaboradores" />
+          <NavigationProperty Name="Proyectos" Relationship="Self.FK__Asignacio__Codig__52593CB8" FromRole="Asignaciones" ToRole="Proyectos" />
+        </EntityType>
+        <EntityType Name="Colaboradores">
+          <Key>
+            <PropertyRef Name="Carnet" />
+          </Key>
+          <Property Name="Carnet" Type="Int32" Nullable="false" />
+          <Property Name="PrimerNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SegundoNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SegundoApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="Direccion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Salario" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Categoria" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Asignaciones" Relationship="Self.FK__Asignacio__Carne__5165187F" FromRole="Colaboradores" ToRole="Asignaciones" />
+        </EntityType>
+        <EntityType Name="Proyectos">
+          <Key>
+            <PropertyRef Name="CodigoProyecto" />
+          </Key>
+          <Property Name="CodigoProyecto" Type="Int32" Nullable="false" />
+          <Property Name="NombreProyecto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="0" />
+          <Property Name="FechaFin" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Asignaciones" Relationship="Self.FK__Asignacio__Codig__52593CB8" FromRole="Proyectos" ToRole="Asignaciones" />
+        </EntityType>
+        <Association Name="FK__Asignacio__Carne__5165187F">
+          <End Role="Colaboradores" Type="Self.Colaboradores" Multiplicity="1" />
+          <End Role="Asignaciones" Type="Self.Asignaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Colaboradores">
+              <PropertyRef Name="Carnet" />
+            </Principal>
+            <Dependent Role="Asignaciones">
+              <PropertyRef Name="Carnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Asignacio__Codig__52593CB8">
+          <End Role="Proyectos" Type="Self.Proyectos" Multiplicity="1" />
+          <End Role="Asignaciones" Type="Self.Asignaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proyectos">
+              <PropertyRef Name="CodigoProyecto" />
+            </Principal>
+            <Dependent Role="Asignaciones">
+              <PropertyRef Name="CodigoProyecto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ConstructoraUHEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Asignaciones" EntityType="Self.Asignaciones" />
+          <EntitySet Name="Colaboradores" EntityType="Self.Colaboradores" />
+          <EntitySet Name="Proyectos" EntityType="Self.Proyectos" />
+          <AssociationSet Name="FK__Asignacio__Carne__5165187F" Association="Self.FK__Asignacio__Carne__5165187F">
+            <End Role="Colaboradores" EntitySet="Colaboradores" />
+            <End Role="Asignaciones" EntitySet="Asignaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Asignacio__Codig__52593CB8" Association="Self.FK__Asignacio__Codig__52593CB8">
+            <End Role="Proyectos" EntitySet="Proyectos" />
+            <End Role="Asignaciones" EntitySet="Asignaciones" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ConstructoraUHModelStoreContainer" CdmEntityContainer="ConstructoraUHEntities">
+          <EntitySetMapping Name="Asignaciones">
+            <EntityTypeMapping TypeName="ConstructoraUHModel.Asignaciones">
+              <MappingFragment StoreEntitySet="Asignaciones">
+                <ScalarProperty Name="Carnet" ColumnName="Carnet" />
+                <ScalarProperty Name="CodigoProyecto" ColumnName="CodigoProyecto" />
+                <ScalarProperty Name="FechaAsignacion" ColumnName="FechaAsignacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Colaboradores">
+            <EntityTypeMapping TypeName="ConstructoraUHModel.Colaboradores">
+              <MappingFragment StoreEntitySet="Colaboradores">
+                <ScalarProperty Name="Carnet" ColumnName="Carnet" />
+                <ScalarProperty Name="PrimerNombre" ColumnName="PrimerNombre" />
+                <ScalarProperty Name="SegundoNombre" ColumnName="SegundoNombre" />
+                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proyectos">
+            <EntityTypeMapping TypeName="ConstructoraUHModel.Proyectos">
+              <MappingFragment StoreEntitySet="Proyectos">
+                <ScalarProperty Name="CodigoProyecto" ColumnName="CodigoProyecto" />
+                <ScalarProperty Name="NombreProyecto" ColumnName="NombreProyecto" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|e:\\material de estudio\\aa-u politecnica\\vi cuatrimestre\\programaci\u00F3n iii\\examenes\\examenfinal\\examenfinal\\examenfinal\\controllers\\colaboradorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|solutionrelative:examenfinal\\controllers\\colaboradorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|e:\\material de estudio\\aa-u politecnica\\vi cuatrimestre\\programaci\u00F3n iii\\examenes\\examenfinal\\examenfinal\\examenfinal\\views\\colaboradores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|solutionrelative:examenfinal\\views\\colaboradores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|e:\\material de estudio\\aa-u politecnica\\vi cuatrimestre\\programaci\u00F3n iii\\examenes\\examenfinal\\examenfinal\\examenfinal\\controllers\\asignacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|solutionrelative:examenfinal\\controllers\\asignacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|e:\\material de estudio\\aa-u politecnica\\vi cuatrimestre\\programaci\u00F3n iii\\examenes\\examenfinal\\examenfinal\\examenfinal\\controllers\\proyectoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|solutionrelative:examenfinal\\controllers\\proyectoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|e:\\material de estudio\\aa-u politecnica\\vi cuatrimestre\\programaci\u00F3n iii\\examenes\\examenfinal\\examenfinal\\examenfinal\\colaboradores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{550A464A-6F33-48B0-AC66-EBDFBCB049EB}|ExamenFinal\\ExamenFinal.csproj|solutionrelative:examenfinal\\colaboradores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Colaboradores.cs",
+              "DocumentMoniker": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Colaboradores.cs",
+              "RelativeDocumentMoniker": "ExamenFinal\\Colaboradores.cs",
+              "ToolTip": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Colaboradores.cs",
+              "RelativeToolTip": "ExamenFinal\\Colaboradores.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T02:04:42.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ColaboradoresController.cs",
+              "DocumentMoniker": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Controllers\\ColaboradoresController.cs",
+              "RelativeDocumentMoniker": "ExamenFinal\\Controllers\\ColaboradoresController.cs",
+              "ToolTip": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Controllers\\ColaboradoresController.cs",
+              "RelativeToolTip": "ExamenFinal\\Controllers\\ColaboradoresController.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAuwG0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T01:55:30.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Views\\Colaboradores\\Create.cshtml",
+              "RelativeDocumentMoniker": "ExamenFinal\\Views\\Colaboradores\\Create.cshtml",
+              "ToolTip": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Views\\Colaboradores\\Create.cshtml",
+              "RelativeToolTip": "ExamenFinal\\Views\\Colaboradores\\Create.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T01:54:19.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProyectosController.cs",
+              "DocumentMoniker": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Controllers\\ProyectosController.cs",
+              "RelativeDocumentMoniker": "ExamenFinal\\Controllers\\ProyectosController.cs",
+              "ToolTip": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Controllers\\ProyectosController.cs",
+              "RelativeToolTip": "ExamenFinal\\Controllers\\ProyectosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T01:10:31.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AsignacionesController.cs",
+              "DocumentMoniker": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Controllers\\AsignacionesController.cs",
+              "RelativeDocumentMoniker": "ExamenFinal\\Controllers\\AsignacionesController.cs",
+              "ToolTip": "E:\\Material de Estudio\\AA-U Politecnica\\VI Cuatrimestre\\Programaci\u00F3n III\\Examenes\\ExamenFinal\\ExamenFinal\\ExamenFinal\\Controllers\\AsignacionesController.cs",
+              "RelativeToolTip": "ExamenFinal\\Controllers\\AsignacionesController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T01:09:59.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
